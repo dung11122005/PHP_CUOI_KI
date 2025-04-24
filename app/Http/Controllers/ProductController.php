@@ -149,13 +149,14 @@ class ProductController extends Controller{
     public function filterProducts(Request $request)
     {
         $filters = [
-        'searchValue' => $request->input('searchValue'),
-        'factory' => $request->has('factory') ? explode(',', $request->input('factory')) : [],
-        'type' => $request->has('type') ? explode(',', $request->input('type')) : [],
-        'price' => $request->has('price') ? explode(',', $request->input('price')) : [],
-        'valueStar' => $request->input('valueStar'),
-        'sort' => $request->input('sort'),
-    ];
+            'searchValue' => $request->input('searchValue'),
+            'factory' => $request->has('factory') ? (is_string($request->input('factory')) ? explode(',', $request->input('factory')) : $request->input('factory')) : [],
+            'type' => $request->has('type') ? (is_string($request->input('type')) ? explode(',', $request->input('type')) : $request->input('type')) : [],
+            'price' => $request->has('price') ? (is_string($request->input('price')) ? explode(',', $request->input('price')) : $request->input('price')) : [],
+            'valueStar' => $request->input('valueStar'),
+            'sort' => $request->input('sort'),
+        ];
+
 
         $perPage = $request->input('per_page', 9); // Số sản phẩm mỗi trang
 
