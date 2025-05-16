@@ -65,6 +65,7 @@ docker-compose up -d
 1. Mở ứng dụng **Docker Desktop**
 2. Vào tab **Containers**
 3. Tìm container tên **`myproject`** (hoặc tên bạn đặt trong `docker-compose.yml`)
+![khi build docker thành công](https://github.com/dung11122005/IMG_TEST/blob/master/README%20PHP/docker1.png)
 4. Nhấn **Start** (nếu container chưa chạy)
 5. Chờ vài giây, sau đó mở trình duyệt để truy cập:
 
