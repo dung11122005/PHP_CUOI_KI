@@ -42,3 +42,11 @@ Mở Terminal hoặc CMD ngay tại thư mục gốc chứa project (chứa file
 
 ```bash
 docker exec -u root -it laravel-app php artisan storage:link
+
+
+## 5. 🐳 Build và khởi động Docker
+
+### ⏱ Nếu bạn **chưa từng build** lần nào, chạy lệnh:
+
+```bash
+docker compose up --build
